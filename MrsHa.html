@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="js/aframe1.4.1.js"></script>
+	<script src="js/mindar1.2.js"></script>
+	<script src="js/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+  </head>
+  <body>
+	<a-scene mindar-image="imageTargetSrc: ./targets.mind; filterMinCF:0.00001; filterBeta: 0.01" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"> 
+	  <a-assets>
+		<a-asset-item id="Model" src="models/mrsHaWaving.gltf"></a-asset-item>
+	  </a-assets>  
+	  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>  
+      <a-entity mindar-image-target="targetIndex: 0"> 
+		<a-gltf-model rotation="90 0 0" position="0 0 0" scale="0.80 0.80 0.80" src="#Model" animation-mixer>
+      </a-entity>  
+    </a-scene>
+  </body>
+</html>
